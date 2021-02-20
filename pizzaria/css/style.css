@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: #F4B32E;
+}
+
+.pagina__batata .secao__pizza {
+    background: url("../imagens/fundo-batatafrita.png") no-repeat center center / cover;
+    animation: move 1s infinite alternate;
+}
+
+.pagina__xbacon .secao__pizza {
+    background: url("../imagens/fundo-hamburger.png") no-repeat center center / cover;
+    animation: move 1s infinite alternate;
+}
+
+.pagina__sanduiche .secao__pizza {
+    background: url("../imagens/fundo-sanduiche.png") no-repeat center center / cover;
+    animation: move 1s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0px -5px;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+
+/* SEÇÃO PIZZA */
+.secao__pizza {
+    background: url("../imagens/fundo-pizza.jpg") no-repeat center center / cover;
+    animation: move 1s infinite alternate;
+}
+
+.secao__pizza > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1109px;
+    height: 613px;
+    margin: 0 auto;
+}
+
+.secao__pizza .pizza__info {
+    display: flex;
+    align-items: center;
+}
+
+.secao__pizza .pizza__info div:nth-child(2) {
+    position: relative;
+    border: 3px solid #C8762F;
+    padding: 56px 38px;
+    margin-left: 35px;
+    background: #fff;
+}
+
+.secao__pizza .pizza__info div:nth-child(2)::before {
+    content:"";
+    position: absolute;
+    left: -25px;
+    display: block;
+    width: 42px;
+    height: 42px;
+    transform: rotate(45deg);
+    border: 3px solid #C8762F;
+    border-right: none;
+    border-top: none;
+    background: #fff;
+}
+
+.secao__pizza span {
+    display: block;
+    width: 311px;
+}
+
+.secao__pizza h1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #C8762F;
+}
+.secao__pizza .pizza__info div:nth-child(2) p:nth-of-type(1) {
+    font-size: 14px;
+    line-height: 21px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5px;
+    color: #A36607;
+}
+
+.secao__pizza .pizza__info div:nth-child(2) p:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border: 2px solid #C8762F;
+    border-radius: 0 0 0 20px;
+    border-top: none;
+    border-right: none;
+    padding: 8px 13px;
+    background: #D58A3A;
+    color: #fff;
+}
+
+.secao__pizza nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 27px;
+}
+
+.secao__pizza nav div {
+    display: flex;
+    justify-content: space-between;
+    width: 296px;
+    border: 1px solid #422E0644;
+    border-radius: 47px;
+    background: #FABF48;
+}
+
+.secao__pizza nav a {
+    position: relative;
+    display: block;
+    width: 50%;
+    text-align: center;
+    padding: 6px 0;
+    
+}
+
+.secao__pizza nav a:hover {
+    background: #E99F0C;
+}
+
+.secao__pizza nav a:nth-child(1) {
+    border-right: none;
+    border-radius: 47px 0 0 47px;
+}
+
+.secao__pizza nav a:nth-child(2) {
+    border-left: none;
+    border-radius: 0 47px 47px 0;
+    border-left: 1px solid #422E0644;
+}
+
+/* SEÇÃO OPÇÕES */
+.secao__opcoes {
+    padding: 25px 0;
+    margin-bottom: 40px;
+    background: #FFFFFF;
+}
+
+.secao__opcoes ul {
+    display: flex;
+    justify-content: space-between;
+    width: 1109px;
+    margin: 0 auto;
+}
+
+.secao__opcoes ul li {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: -8px -8px 20px #0001,
+                8px 8px 20px #0001;
+}
+
+.secao__opcoes ul p { 
+    position: absolute;
+    right: -6px;
+    top: 48px;
+    font-size: 13px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 8px 19px;
+    border-radius: 20px 0  0 20px;
+    color: #fff;
+    background: #83C351;
+}
+
+.secao__opcoes img {
+    width: 100%;
+}
+
+.secao__opcoes ul p:after {
+    content:'';
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: url(../imagens/fundo-preco.svg) no-repeat;
+}
+
+.secao__opcoes h4 {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 25px 0;
+    border-radius: 0 0 20px 20px;
+    color: #272D3D;
+}
+
+/* RESPONSIVO */
+@media only screen and (max-width: 1136px) and (min-width: 780px){
+    .secao__pizza > div:nth-child(1) {
+        width: 100%;
+        height: 400px;
+    }
+
+    .secao__opcoes ul {
+        width: 700px;
+    }
+
+    .secao__opcoes ul li {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 779px) and (min-width: 750px) {
+    .secao__pizza > div:nth-child(1) {
+        width: 100%;
+        height: 400px;
+    }
+
+    .secao__opcoes ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .secao__opcoes ul li {
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    .secao__opcoes ul li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 749px) and (min-width: 500px) {
+    .secao__pizza > div:nth-child(1) {
+        width: 100%;
+        height: 550px;
+    }
+    
+    .pizza__info {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 20px;
+        background: #fff;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(2) {
+        margin: 0;
+        padding: 50px 10px;
+        border: none;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(2)::before {
+        display: none;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(2) p:nth-of-type(2) {
+        position: absolute;
+        right: -20px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .secao__opcoes ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .secao__opcoes ul li {
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    .secao__opcoes ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .secao__opcoes ul p {
+        top: 40px;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .secao__pizza > div:nth-child(1) {
+        width: 100%;
+        height: 550px;
+    } 
+    
+    .pizza__info {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 20px;
+        background: #fff;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(1) {
+        width: 100%;
+        text-align: center;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(1) img {
+        width: 70%;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(2) {
+        width: 100%;
+        margin: 0;
+        padding: 50px 0px;
+        border: none;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(2)::before {
+        display: none;
+    }
+
+    .secao__pizza span {
+        width: auto;
+    }
+
+    .secao__pizza h1 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(2) p:nth-of-type(1) {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .secao__pizza .pizza__info div:nth-child(2) p:nth-of-type(2) {
+        position: absolute;
+        right: -20px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .secao__opcoes ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .secao__opcoes ul li {
+        width: 250px;
+        margin-bottom: 50px;
+    }
+
+    .secao__opcoes h4 {
+        font-size: 14px;
+    }
+
+    .secao__opcoes ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .secao__opcoes ul p {
+        top: 40px;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
